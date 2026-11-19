@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-DOMAIN/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/advertisements.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/careers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/clans.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/elections.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/events.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/gallery.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://YOUR-DOMAIN/kampala-university-partnerships.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/kampala-university-projects.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/login.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/news.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/privacy.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/register.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://YOUR-DOMAIN/support.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
