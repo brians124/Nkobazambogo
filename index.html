@@ -324,9 +324,14 @@ header.kh nav a.bounce,header.kh .lgbtn.bounce{animation:kunBounce .6s ease-out}
 </style>
 <style id="kun-hero-portrait-mobile">
 /* Small devices: show the portrait at the bottom-left of the hero, beside the two buttons */
+.medal{width:min(100%,18rem)}
+.hero .copy{margin-left:0;padding-left:0}
 @media(max-width:860px){
-.hero .drums{display:block;width:clamp(4.6rem,13vw,9rem);left:.25rem;bottom:2rem;z-index:1}
+.medal{width:min(58%,12rem)}
 }
+.purpose .pking{margin:1.25rem auto 0;text-align:center;width:min(70%,12rem)}
+.purpose .pking img{width:100%;height:auto;border:3px solid var(--gold);border-radius:var(--r);background:#fff;box-shadow:0 4px 12px #06196b2b}
+.purpose .pking figcaption{margin-top:.5rem;font:italic 700 .95rem Georgia,serif;color:var(--blue)}
 </style>
 <style id="kun-header-curve">
 /* Header: logo + name on white (left), blue nav bar (right) joined by a smooth S-curve sweep */
@@ -394,7 +399,6 @@ header.kh nav a{position:relative}
 
 <section class="hero" aria-label="Welcome">
 
-<img class="drums" src="images/home-hero-portrait.png" alt="Portrait" width="700" height="763" loading="eager">
 <div class="in">
 <div class="copy">
 <p class="w">Welcome to</p>
@@ -428,7 +432,9 @@ header.kh nav a{position:relative}
 <a class="pc2" href="clans.html"><h3>Preserve Our Heritage</h3><p>Explore the Buganda clans, their totems and traditions, so our culture and identity are passed on.</p><span>Explore the clans →</span></a>
 <a class="pc2" href="events.html"><h3>Stay Connected</h3><p>Follow events, news and announcements, and take part in elections and community life.</p><span>See what's on →</span></a>
 <a class="pc2" href="careers.html"><h3>Support Growth &amp; Welfare</h3><p>Find careers and opportunities, partnerships and community projects that help members progress.</p><span>See opportunities →</span></a>
-</div></section>
+</div>
+<figure class="pking"><img src="images/home-hero-portrait.png" alt="The Kabaka of Buganda" width="700" height="763" loading="lazy"><figcaption>Ssaabasajja Kabaka of Buganda</figcaption></figure>
+</section>
 
 <section class="qa" aria-labelledby="qa-h">
 <div class="qa-in">
