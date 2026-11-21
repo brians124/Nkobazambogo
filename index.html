@@ -269,7 +269,101 @@ header.kh nav a.active{border-bottom-color:#ffffff2a;color:var(--gold)}
 }
 </style>
 <style>header.kh .brand .bn{font-size:clamp(.8rem,1.5vw,1.1rem);line-height:1.05}
-</style><link rel="stylesheet" href="enhance.css"></head>
+</style><link rel="stylesheet" href="enhance.css">
+<style id="kun-quick-access">
+/* Quick Access: large-screen redesign (campus photo background, glass panel, icon-tile cards). Below 1051px the original compact grid is used. */
+.qa-h,.quick .qimg,.quick .qt small,.quick .qgo{display:none}
+@media(min-width:1051px){
+.qa{position:relative;border-radius:var(--r);overflow:hidden;background:url(images/quick-bg.jpg) center bottom/cover no-repeat;padding:clamp(1.2rem,2vw,1.8rem) clamp(1rem,2.4vw,2rem) clamp(8rem,17vw,16rem)}
+.qa::before{content:"";position:absolute;inset:0;background:linear-gradient(#dbe9ff 0,#cfe2ff55 55%,#0000 75%);pointer-events:none}
+.qa-in{position:relative;border-radius:28px;background:#ffffffb8;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1.5px solid #fff;box-shadow:0 10px 30px #06196b30;padding:1.3rem clamp(1rem,2.4vw,2.2rem) 1.8rem}
+.qa-h{display:block;text-align:center;margin:0 0 1.2rem}
+.qa-h h2{position:relative;display:flex;align-items:center;justify-content:center;gap:.7rem;width:max-content;max-width:100%;margin:0 auto;padding:.35em 2.2em;font:italic 800 clamp(1.5rem,2.8vw,2.4rem) Arial,sans-serif;color:#fff;background:var(--bt);border:2px solid #5d86f0;border-radius:999px;box-shadow:0 6px 14px #06196b55,inset 0 2px 0 #ffffff55}
+.qa-h h2::before,.qa-h h2::after{content:"";position:absolute;top:50%;width:clamp(5rem,16vw,15rem);height:3px;background:var(--blue)}
+.qa-h h2::before{right:100%;margin-right:.8rem}.qa-h h2::after{left:100%;margin-left:.8rem}
+.qa-h h2 .ic{width:1.3em;height:1.3em;color:#fff}
+.qa-h p{margin:.5rem 0 0;font:italic 700 clamp(1rem,1.7vw,1.35rem) Arial,sans-serif;color:var(--blue)}
+.qa .quick{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(.9rem,1.6vw,1.5rem) clamp(1rem,2.4vw,2.2rem)}
+.qa .quick a{justify-content:flex-start;align-items:stretch;gap:0;padding:0;height:clamp(6.2rem,9.2vw,8.5rem);overflow:hidden;text-align:left;border:2px solid var(--c);border-radius:22px;background:linear-gradient(90deg,#0000,#f5f8ff 70%),linear-gradient(var(--t),var(--b));box-shadow:0 6px 14px #06196b2e;transition:transform .15s,box-shadow .15s}
+.qa .quick a:hover{transform:translateY(-3px);box-shadow:0 10px 20px #06196b44;border-color:var(--c)}
+.qa .quick .i{display:none}
+.qa .quick .qimg{display:block;flex:0 0 auto;height:100%}
+.qa .quick .qimg img{display:block;height:100%;width:auto}
+.qa .quick .qt{display:flex;flex-direction:column;justify-content:center;gap:.2rem;flex:1;min-width:0;padding:0 .6rem 0 .5rem}
+.qa .quick .qt b{font:700 clamp(.95rem,1.65vw,1.5rem)/1.15 Arial,sans-serif;color:#0a1f6b}
+.qa .quick .qt small{display:block;font:400 clamp(.78rem,1.2vw,1.05rem)/1.25 Arial,sans-serif;color:#475273}
+.qa .quick .qgo{display:flex;align-items:center;justify-content:center;flex:0 0 auto;align-self:center;width:clamp(2.2rem,3.4vw,2.9rem);height:clamp(2.2rem,3.4vw,2.9rem);margin-right:clamp(.7rem,1.6vw,1.3rem);border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff6,#0000 55%),var(--c);box-shadow:0 3px 7px #0004}
+.qa .quick .qgo svg{width:55%;height:55%}
+}
+</style>
+<style id="kun-clans-wide">
+/* Large screens: News + Events share the top row; Featured Buganda Clans spans the full width below with all 6 clans in one row */
+@media(min-width:1051px){
+.cols{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.cols .panel:last-child{grid-column:1/-1}
+.cols .panel:last-child .clans{grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(.6rem,1.2vw,1.1rem);padding:clamp(.7rem,1.4vw,1.2rem)}
+.cols .panel:last-child .cl img{aspect-ratio:4/3}
+.cols .panel:last-child .cl span{font-size:clamp(.85rem,1.2vw,1.1rem)}
+.cols .panel:last-child .cl small{font-size:clamp(.7rem,.9vw,.85rem)}
+}
+</style>
+<style id="kun-nav-bounce">
+/* Header links bounce on hover (desktop) and on tap (touch) */
+@keyframes kunBounce{0%{transform:translateY(0)}25%{transform:translateY(-.55rem)}45%{transform:translateY(0)}62%{transform:translateY(-.28rem)}78%{transform:translateY(0)}90%{transform:translateY(-.1rem)}100%{transform:translateY(0)}}
+header.kh nav a,header.kh .lgbtn{will-change:transform}
+@media(hover:hover){header.kh nav a:hover,header.kh .lgbtn:hover{animation:kunBounce .6s ease-out}}
+header.kh nav a.bounce,header.kh .lgbtn.bounce{animation:kunBounce .6s ease-out}
+@media(prefers-reduced-motion:reduce){header.kh nav a:hover,header.kh nav a.bounce,header.kh .lgbtn:hover,header.kh .lgbtn.bounce{animation:none}}
+</style>
+<style id="kun-sponsor-yaps">
+.pc .p-yaps{display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;text-decoration:none;transition:transform .15s}
+.pc .p-yaps:hover{transform:translateY(-2px)}
+.pc .p-yaps .yn{font:800 1.4rem Arial,sans-serif;letter-spacing:.01em;color:#0a2a9c}
+.pc .p-yaps .yn em{font-style:normal;background:linear-gradient(90deg,#0bb6e8,#b51fe0);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.pc .p-yaps img{display:block;height:2.8rem;width:auto}
+</style>
+<style id="kun-hero-portrait-mobile">
+/* Small devices: show the portrait at the bottom-left of the hero, beside the two buttons */
+@media(max-width:860px){
+.hero .drums{display:block;width:clamp(4.6rem,13vw,9rem);left:.25rem;bottom:2rem;z-index:1}
+}
+</style>
+<style id="kun-header-curve">
+/* Header: logo + name on white (left), blue nav bar (right) joined by a smooth S-curve sweep */
+@media(min-width:901px){
+header.kh{--curve:4.6rem}
+header.kh nav{
+  position:relative;
+  border-radius:0;
+  padding:0 .4rem 0 calc(var(--curve) + .8rem);
+  background:linear-gradient(var(--blue),var(--blue)) right top/calc(100% - var(--curve) + 1px) 100% no-repeat;
+}
+header.kh nav::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:var(--curve);pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M100 0V100H0C34 100 40 52 62 32C82 14 88 0 100 0Z' fill='%230a2a9c'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+}
+header.kh nav a{position:relative}
+}
+@media(max-width:900px){header.kh nav::before{display:none}}
+</style>
+<style id="kun-purpose-photos">
+/* Purpose section: Katikkiro (left) and Professor (right) flank the heading; images shown as-is, no frame or crop */
+.purpose .pfeat{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(.75rem,2.5vw,2rem);margin:0 0 1.25rem}
+.purpose .pfeat .ph{margin:0 auto}
+.purpose .pfig{margin:0;width:clamp(7rem,17vw,14rem);border:0;border-radius:0;background:none;box-shadow:none}
+.purpose .pfig img{display:block;width:100%;height:auto}
+@media(max-width:700px){
+/* Small devices: Katikkiro at the very top of the section, Professor at the very end */
+.purpose{display:flex;flex-direction:column;gap:1.1rem}
+.purpose .pfeat{display:contents}
+.purpose .pfig-l{order:0}
+.purpose .pfeat .ph{order:1;margin:0 auto}
+.purpose .pg{order:2}
+.purpose .pfig-r{order:3}
+.purpose .pfig{align-self:center;width:min(62vw,15rem)}
+}
+</style>
+</head>
 <body id="home">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17" cy="9" r="2.8"/><path d="M17 14.2c2.7.2 4.5 2 4.5 5.8"/></symbol>
@@ -323,8 +417,12 @@ header.kh nav a.active{border-bottom-color:#ffffff2a;color:var(--gold)}
 
 <main>
 <section class="purpose" id="purpose" aria-labelledby="purpose-h">
+<div class="pfeat">
+<figure class="pfig pfig-l"><img src="images/katikiro.png" alt="The Katikkiro of Buganda" loading="lazy"></figure>
 <div class="ph"><small>Our Purpose</small><h2 id="purpose-h">Why This Website Exists</h2>
 <p>This is the home of the Buganda community at Kampala University. It brings members together to keep our culture alive, support one another, and grow into a stronger community.</p></div>
+<figure class="pfig pfig-r"><img src="images/professor.png" alt="Professor" loading="lazy"></figure>
+</div>
 <div class="pg">
 <a class="pc2" href="register.html"><h3>Unite Our Members</h3><p>Register, pay your UGX 1,000 annual subscription by MTN MoMo or Airtel Money, and get your membership card.</p><span>Become a member →</span></a>
 <a class="pc2" href="clans.html"><h3>Preserve Our Heritage</h3><p>Explore the Buganda clans, their totems and traditions, so our culture and identity are passed on.</p><span>Explore the clans →</span></a>
@@ -332,14 +430,19 @@ header.kh nav a.active{border-bottom-color:#ffffff2a;color:var(--gold)}
 <a class="pc2" href="careers.html"><h3>Support Growth &amp; Welfare</h3><p>Find careers and opportunities, partnerships and community projects that help members progress.</p><span>See opportunities →</span></a>
 </div></section>
 
+<section class="qa" aria-labelledby="qa-h">
+<div class="qa-in">
+<div class="qa-h"><h2 id="qa-h"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Quick Access</h2><p>Explore our platform with ease</p></div>
 <div class="quick" role="group" aria-label="Quick links">
-<a href="register.html"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span>Member Registration</a>
-<a href="advertisements.html"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-megaphone"/></svg></span>Advertisements</a>
-<a href="about.html"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg></span>About Us</a>
-<a href="events.html"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg></span>Events &amp; Activities</a>
-<a href="news.html"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-news"/></svg></span>News &amp; Announcements</a>
-<a href="clans.html"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>Buganda Clans Directory</a>
+<a href="register.html" style="--c:#1f6fe5;--t:#eef5fe;--b:#cfe4fe"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span><span class="qimg"><img src="images/quick/register.png" alt="" loading="lazy"></span><span class="qt"><b>Member Registration</b><small>Join our community today</small></span><span class="qgo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<a href="advertisements.html" style="--c:#2e9a2e;--t:#ecf3fd;--b:#d0e2ec"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-megaphone"/></svg></span><span class="qimg"><img src="images/quick/ads.png" alt="" loading="lazy"></span><span class="qt"><b>Advertisements</b><small>Post and view adverts</small></span><span class="qgo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<a href="about.html" style="--c:#f59a0c;--t:#f0f4fc;--b:#f6e1d2"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg></span><span class="qimg"><img src="images/quick/about.png" alt="" loading="lazy"></span><span class="qt"><b>About Us</b><small>Learn more about KU-N</small></span><span class="qgo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<a href="events.html" style="--c:#7b2fe0;--t:#eef2fd;--b:#d3dafd"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg></span><span class="qimg"><img src="images/quick/events.png" alt="" loading="lazy"></span><span class="qt"><b>Events &amp; Activities</b><small>Stay updated with events</small></span><span class="qgo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<a href="news.html" style="--c:#17a58f;--t:#ecf4fe;--b:#c4e4e0"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-news"/></svg></span><span class="qimg"><img src="images/quick/news.png" alt="" loading="lazy"></span><span class="qt"><b>News &amp; Announcements</b><small>Get the latest updates</small></span><span class="qgo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+<a href="clans.html" style="--c:#0d3a9e;--t:#ebf2fe;--b:#ccdbfd"><span class="i"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><span class="qimg"><img src="images/quick/clans.png" alt="" loading="lazy"></span><span class="qt"><b>Buganda Clans Directory</b><small>Discover Buganda clans</small></span><span class="qgo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
 </div>
+</div>
+</section>
 
 <section class="cd" id="cd" role="timer" aria-label="Countdown to the next event" hidden></section>
 
@@ -355,7 +458,7 @@ header.kh nav a.active{border-bottom-color:#ffffff2a;color:var(--gold)}
 <section class="join"><h3><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg> Join Our Community</h3><p>Be part of a greater Buganda</p><a class="btn" href="register.html">Register Now →</a></section>
 </div>
 
-<div class="partners"><b><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> Our Partners &amp; Sponsors:</b><div class="pc"><span class="p-mtn">MTN</span><span class="p-air">airtel</span><span class="p-momo">MoMo<em>from MTN</em></span><span class="p-kcca">KCCA</span></div><div class="quote">“Obumu Geemaanyi – Together for a Greater Buganda”</div></div>
+<div class="partners"><b><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> Our Partners &amp; Sponsors:</b><div class="pc"><span class="p-mtn">MTN</span><span class="p-air">airtel</span><span class="p-momo">MoMo<em>from MTN</em></span><span class="p-kcca">KCCA</span><a class="p-yaps" href="https://brians124.github.io/YAPSMUSIC.APP/" target="_blank" rel="noopener" aria-label="YAPSMusic (opens in a new tab)"><img src="images/yaps-music.png" alt="" width="46" height="49" loading="lazy"><b class="yn">YAPS<em>Music</em></b></a></div><div class="quote">“Obumu Geemaanyi – Together for a Greater Buganda”</div></div>
 </main>
 
 <footer class="kf" id="siteFooter">
@@ -382,7 +485,7 @@ const SUPABASE_URL = "";   // https://xxxx.supabase.co
 const SUPABASE_KEY = "";   // anon public key
 const WA_NUMBER = "256700000000";   // WhatsApp number, digits only with country code
 const MEMBERS_START = 0;            // members who joined before online registration
-const IMG = {"t1": "images/buganda-kasubi-interior.jpg", "t2": "images/buganda-royal-car.jpg", "t3": "images/buganda-kasubi-roof.jpg", "e1": "images/buganda-kasubi-portraits.jpg", "e2": "images/buganda-kasubi-entrance.jpg", "e3": "images/buganda-kasubi-interior.jpg", "Ffumbe": "images/clans/ffumbe.jpg", "Lugave": "images/clans/lugave.jpg", "Ngeye": "images/clans/ngeye.jpg", "Njovu": "images/clans/njovu.jpg", "Mpologoma": "images/clans/mpologoma.jpg", "Mmamba": "images/clans/mmamba.jpg", "Nvubu": "images/clans/nvubu.jpg", "Njaza": "images/clans/njaza.jpg", "Nnyonyi": "images/clans/nnyonyi.jpg", "Ngaali": "images/clans/ngaali.jpg"};
+const IMG = {"t1": "images/buganda-kasubi-interior.jpg", "t2": "images/buganda-royal-car.jpg", "t3": "images/buganda-kasubi-roof.jpg", "e1": "images/buganda-kasubi-portraits.jpg", "e2": "images/buganda-kasubi-entrance.jpg", "e3": "images/buganda-kasubi-interior.jpg", "Ffumbe": "images/clans/ffumbe.jpg", "Lugave": "images/clans/lugave.jpg", "Ngeye": "images/clans/ngeye.jpg", "Nkima": "images/clans/ngeye.jpg", "Njovu": "images/clans/njovu.jpg", "Mpologoma": "images/clans/mpologoma.jpg", "Mmamba": "images/clans/mmamba.jpg", "Nvubu": "images/clans/nvubu.jpg", "Njaza": "images/clans/njaza.jpg", "Nnyonyi": "images/clans/nnyonyi.jpg", "Ngaali": "images/clans/ngaali.jpg"};
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safeUrl = u => (/^(https?:|data:image\/)/i.test(u || "") || /^(assets|images)\//.test(u || "")) ? u : "";
@@ -392,7 +495,7 @@ const hdr = () => ({headers:{apikey:SUPABASE_KEY, Authorization:"Bearer " + SUPA
 
 let news = [];    // empty until the Supabase backend is connected
 let events = [];  // empty until the Supabase backend is connected
-let clans = [["Ffumbe","Totem: African civet (Ffumbe)"],["Lugave","Totem: Pangolin"],["Ngeye","Totem: Colobus monkey"],["Njovu","Totem: Elephant"],["Mpologoma","Totem: Lion"],["Mmamba","Includes Mmamba Gabunga and Mmamba Kakoboza"],["Nvubu","Totem: Hippopotamus"],["Njaza","Totem: Reedbuck"],["Nnyonyi","Different Nnyonyi clan branches"],["Ngaali","Totem: Crested crane"]].map(([name,totem])=>({name,totem,img:IMG[name]}));
+let clans = [["Ffumbe","Totem: African civet (Ffumbe)"],["Lugave","Totem: Pangolin"],["Nkima","Totem: Monkey"],["Njovu","Totem: Elephant"],["Mpologoma","Totem: Lion"],["Mmamba","Includes Mmamba Gabunga and Mmamba Kakoboza"],["Nvubu","Totem: Hippopotamus"],["Njaza","Totem: Reedbuck"],["Nnyonyi","Different Nnyonyi clan branches"],["Ngaali","Totem: Crested crane"]].map(([name,totem])=>({name,totem,img:IMG[name]}));
 
 const IC = n => `<svg class="ic" aria-hidden="true"><use href="#i-${n}"/></svg>`;
 const pic = u => safeUrl(u) ? `<img src="${safeUrl(u)}" alt="" loading="lazy">` : "";
@@ -497,7 +600,7 @@ T.onclick = () => scrollTo({top:0, behavior:"smooth"});
 </script>
 <script id="kun-features-js">
 (function(){
-var P=[["index","Home","Welcome, membership, news, events and clans","home welcome member"],["about","About Us","Vision, mission, leadership and our story","vision mission values leaders story"],["clans","Buganda Clans","Directory of clans, totems and heritage","clan totem ngeye mpologoma"],["news","News & Announcements","Latest news from the community","news announcements"],["events","Events & Activities","Calendar and upcoming events","events calendar cultural day"],["advertisements","Advertisements","Promote your business to members","ads advertise packages sponsor"],["gallery","Gallery","Photos and videos","photos videos pictures"],["careers","Careers & Opportunities","Jobs, internships and scholarships","jobs internships scholarships careers"],["elections","Leadership Elections","Results, leaders and governance","vote election results leaders"],["kampala-university-partnerships","Partnerships","Partners and sponsors","partners sponsors"],["kampala-university-projects","Projects","Community projects and impact","projects community health tree planting"],["faq","FAQ & Help Center","Answers to common questions","faq help questions"],["support","Support Centre","Get help from our team","support help complaint"],["contact","Contact Us","Phone, email, map and message form","contact phone email map"],["privacy","Privacy & Terms","Privacy policy and terms of service","privacy terms cookies data"],["register","Register","Join and get your membership card","join register membership pay momo airtel"],["login","Member Login","Sign in to your account","login sign in"]];
+var P=[["index","Home","Welcome, membership, news, events and clans","home welcome member"],["about","About Us","Vision, mission, leadership and our story","vision mission values leaders story"],["clans","Buganda Clans","Directory of clans, totems and heritage","clan totem nkima ngeye mpologoma"],["news","News & Announcements","Latest news from the community","news announcements"],["events","Events & Activities","Calendar and upcoming events","events calendar cultural day"],["advertisements","Advertisements","Promote your business to members","ads advertise packages sponsor"],["gallery","Gallery","Photos and videos","photos videos pictures"],["careers","Careers & Opportunities","Jobs, internships and scholarships","jobs internships scholarships careers"],["elections","Leadership Elections","Results, leaders and governance","vote election results leaders"],["kampala-university-partnerships","Partnerships","Partners and sponsors","partners sponsors"],["kampala-university-projects","Projects","Community projects and impact","projects community health tree planting"],["faq","FAQ & Help Center","Answers to common questions","faq help questions"],["support","Support Centre","Get help from our team","support help complaint"],["contact","Contact Us","Phone, email, map and message form","contact phone email map"],["privacy","Privacy & Terms","Privacy policy and terms of service","privacy terms cookies data"],["register","Register","Join and get your membership card","join register membership pay momo airtel"],["login","Member Login","Sign in to your account","login sign in"]];
 var R={about:"clans elections events",clans:"about events gallery",news:"events gallery elections",events:"news gallery register",advertisements:"contact kampala-university-partnerships register",gallery:"events news clans",careers:"support kampala-university-partnerships contact",elections:"about news register","kampala-university-partnerships":"kampala-university-projects advertisements contact","kampala-university-projects":"kampala-university-partnerships events register",faq:"support contact register",support:"faq contact careers",contact:"faq support register",privacy:"faq contact about",login:"register faq support",register:"login faq contact"};
 var cur=(location.pathname.split("/").pop()||"index.html").replace(".html","")||"index";
 var get=function(k){return P.filter(function(p){return p[0]==k})[0]};
@@ -550,5 +653,33 @@ lg.addEventListener('click',function(){setTimeout(function(){run(ls('kun_lang')=
 if(ls('kun_lang')==='lg')setTimeout(function(){run('lg')},0);
 })();
 </script>
-<script src="enhance.js" defer></script></body>
+<script src="enhance.js" defer></script><script id="kun-nav-bounce-js">
+/* Tap bounce: add .bounce on touch/pointer press, remove when the animation ends so it can replay */
+(function(){var h=document.querySelector('header.kh');if(!h)return;
+h.addEventListener('pointerdown',function(e){var t=e.target.closest('nav a,.lgbtn');if(!t)return;t.classList.remove('bounce');void t.offsetWidth;t.classList.add('bounce')});
+h.addEventListener('animationend',function(e){if(e.target.classList)e.target.classList.remove('bounce')});
+})();
+</script>
+<script id="kun-hide-side-dots">
+/* Removes the vertical row of round dots fixed to the right edge (created by enhance.js).
+   Finds it by shape, not class name: a fixed, narrow, tall box on the right holding 3+ small round children. */
+(function(){
+function kill(){
+  var vw=document.documentElement.clientWidth;
+  document.querySelectorAll('body > *, body > * > *').forEach(function(e){
+    if(e.dataset.kunDots)return;
+    var cs=getComputedStyle(e);if(cs.position!=='fixed')return;
+    var r=e.getBoundingClientRect();
+    if(r.width>80||r.height<40||vw-r.right>100)return;
+    var k=e.children;if(k.length<3)return;
+    for(var i=0;i<k.length;i++){var c=k[i].getBoundingClientRect();if(c.width>44||c.height>44)return}
+    e.dataset.kunDots='1';e.style.setProperty('display','none','important');
+  });
+}
+kill();
+window.addEventListener('load',function(){kill();setTimeout(kill,400);setTimeout(kill,1500);setTimeout(kill,4000)});
+var t;new MutationObserver(function(){clearTimeout(t);t=setTimeout(kill,100)}).observe(document.body,{childList:true});
+})();
+</script>
+</body>
 </html>
